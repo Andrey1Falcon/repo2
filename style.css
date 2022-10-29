@@ -2,9 +2,9 @@
 :root {
     /*---RGB*---*/
     --main-color: #1e1e1e;
-    --background-mask: rgb(240, 240, 240);
+    --background-mask: rgb(226, 226, 226);
     --background-box: rgb(255, 255, 255);
-    --border-box: 0px solid rgba(166, 166, 166, 0.85);
+    --border-box: 0px solid rgb(255, 255, 255);
     --border-color: rgb(255, 255, 255);
     /*---Picsel---*/
     --border-radius: 10px;
@@ -291,16 +291,18 @@ opacity: 0;
 
 :root{
     --vw-100: 100vw;
+    --mar-stop: calc(var(--vw-100) * 0.12);
+    --mar-top: calc(var(--vw-100) * 0.12);
     --vw-50: 50vw;
-    --mar-main: var(--stop-3);
+    --mar-main: calc(var(--stop-3) + var(--mar-top));
     --mar-0: calc((var(--vw-50) - var(--vw-50)) + var(--mar-main));
     --mar-1: calc(1 * var(--vw-50) + var(--mar-main));
     --mar-2: calc(2 * var(--vw-50) + var(--mar-main));
     --mar-3: calc(3 * var(--vw-50) + var(--mar-main));
-    --stop-0: calc((var(--vw-50) - var(--vw-50)));
-    --stop-1: calc(1 * (var(--vw-50)));
-    --stop-2: calc(2 * (var(--vw-50)));
-    --stop-3: calc(3 * (var(--vw-50)));
+    --stop-0: calc(var(--vw-50) - var(--vw-50) + var(--mar-stop));
+    --stop-1: calc(1 * var(--vw-50) + var(--mar-stop));
+    --stop-2: calc(2 * var(--vw-50) + var(--mar-stop));
+    --stop-3: calc(3 * var(--vw-50) + var(--mar-stop));
     
 }
 .container{
@@ -370,11 +372,11 @@ opacity: 0;
     position: fixed;
     display: flex;
     width: 100%;
-    height: 48px;
+       height: var(--header-height); 
     justify-content:space-between;
     padding: 8px;
     z-index: 5;
-    background-color: rgba(255, 255, 255, 0.948);
+    background-color: rgb(255, 255, 255);
     
 }
 .header__name{
@@ -502,10 +504,6 @@ opacity: 0;
     object-fit: cover;
 }
     
-
-
-
-
 .img__par__3{
     position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
     margin-top: var(--mar-0);
@@ -516,17 +514,12 @@ opacity: 0;
     z-index: -20;
  
 }
-
 .img__par__j3{
     position: absolute;
     width: var(--vw-100);
-    height: var(--vw-50);
+    height: var(--vw-100);
     object-fit: cover;
 }
-
-
-
-
 .img__par__2{
     position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
     margin-top: var(--mar-0);
@@ -537,17 +530,12 @@ opacity: 0;
     z-index: -30;
  
 }
-
 .img__par__j2{
     position: absolute;
     width: var(--vw-100);
-    height: var(--vw-50);
+    height: var(--vw-100);
     object-fit: cover;
 }
-
-
-
-
 .img__par__1{
     position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
     margin-top: var(--mar-0);
@@ -556,13 +544,11 @@ opacity: 0;
     width: 0px; /*--выравнивание по ширине--*/
     height: 0px; /*--должна быть определена обязательно---*/
     z-index: -40;
- 
 }
-
 .img__par__j1{
     position: absolute;
     width: var(--vw-100);
-    height: var(--vw-50);
+    height: var(--vw-100);
     object-fit: cover;
 }
 
@@ -612,7 +598,9 @@ opacity: 0;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    background-color: rgb(165, 165, 165);
+    background-color: rgba(166, 166, 166, 0);
+    backdrop-filter: blur(80px);
+
 }
 .box__description{
     width: var(--vw-100);
@@ -634,7 +622,6 @@ opacity: 0;
     background-color: rgb(165, 165, 165);
     padding: 20px 20px 20px 20px;
     height: var(--stop-1);
-   
 }
 .small__project__box:hover .box__image{
     margin-top: 0px;
