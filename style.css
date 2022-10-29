@@ -560,20 +560,6 @@ opacity: 0;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .box__info{
     margin-top: var(--vw-50);
     position: relative;
@@ -581,6 +567,8 @@ opacity: 0;
     height: 1900px;
     min-height: 100px;
     background-color: rgba(255, 255, 255, 0);
+    
+    
 
 
 }
@@ -600,7 +588,9 @@ opacity: 0;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     background-color: rgba(166, 166, 166, 0);
-    filter: blur(2px);
+    backdrop-filter: url(commonfilters.svg#filter);
+    backdrop-filter: blur(50px);
+
 
 }
 .box__description{
