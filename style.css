@@ -575,6 +575,7 @@ opacity: 0;
 
 
 .box__info{
+    margin-top: var(--vw-50);
     position: relative;
     width: 100%;
     height: 1900px;
@@ -599,7 +600,7 @@ opacity: 0;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
     background-color: rgba(166, 166, 166, 0);
-    backdrop-filter: blur(80px);
+    filter: blur(2px);
 
 }
 .box__description{
