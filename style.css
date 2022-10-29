@@ -1,0 +1,600 @@
+/* == Default ===========================================*/
+:root {
+    /*---RGB*---*/
+    --main-color: #1e1e1e;
+    --background-mask: rgb(240, 240, 240);
+    --background-box: rgb(255, 255, 255);
+    --border-box: 0px solid rgba(166, 166, 166, 0.85);
+    --border-color: rgb(255, 255, 255);
+    /*---Picsel---*/
+    --border-radius: 10px;
+    --animation-second: 0.5s;
+    --small__project__box__size: 260px;
+    --small__project__box__size__img__heigth: 230px;
+    --margin__default: 20px;
+     /*---MOB*---*/
+    --border-radius__mob: 5px;
+    --animation-second__mob: 0.5s;
+    --small__project__box__size__mob: 144px;
+    --small__project__box__size__img__heigth__mob: 130px;
+    --margin__default__mob:3px;
+
+}
+body{ 
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    color: var(--main-color);
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+}
+*{
+    box-sizing: border-box;
+}
+.background__vid{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+}
+.vid{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+.container{
+        position: relative;
+        max-width : 1240px;
+        margin: 0 auto;
+    
+}
+.warning{
+    font-size: 20px;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20px;
+}
+/* == Intro ===========================================*/
+.intro{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+}
+.intro__1{
+   display: none;
+}
+.intro__1{
+    display: none;
+}
+.header__in__mob{
+    display: none;
+}
+h1{
+    font-size: 20px;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+h2{
+    font-size: 20px;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    margin-left: 100px;
+}
+/* == Header ===========================================*/
+.header{
+}
+.header__in{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    height: 49px;
+    width: 100%;
+    background-color: var(--background-box);
+    border: var(--border-box);
+    padding: 5px 40px 5px 40px;
+    border-radius: var(--border-radius);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.logo__img{
+    width: 70px;
+    height: 30px;
+}
+.logo__img__mob{
+    display: none;
+}
+.header__nav{
+    display: flex;
+    justify-content:space-between;
+    height: 39px;
+    width: 500px;
+    
+}
+.header__nav__link{
+    display: flex;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: var(--main-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0px 10px 0px 10px;
+    transition: background-color var(--animation-second);
+    border-radius: 10px;
+}
+.header__nav__link:hover {
+    background-color: var(--background-mask);   
+}
+/* == Progect ===========================================*/
+
+.project__nav{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: var(--background-box);
+    border: var(--border-box);
+    padding: 20px;
+    border-radius: var(--border-radius);
+}
+.small__project__box{
+    position: relative;
+    width: var(--small__project__box__size);
+    height: var(--small__project__box__size);
+    margin: var(--margin__default);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.box__image{
+    position: relative;
+    width: var(--small__project__box__size);
+    height: var(--small__project__box__size__img__heigth);
+    transition: margin var(--animation-second) linear;
+}
+.img{
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s linear;
+}
+.box__info{
+    width: 100%;
+    height: 290px;
+    background-color: var(--background-mask);
+}
+.box__name{
+    position: relative;
+    width: 260px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.box__description{
+    margin: 10px;
+}
+.small__project__box:hover .box__image{
+    
+    margin-top: -230px;
+}
+.small__project__box:hover .img{
+    
+opacity: 0;
+}
+
+/* == Creater ========================================*/
+.creator{
+    position:  relative;
+    display:flex;
+    flex-wrap: wrap;
+    background-color: var(--background-box);
+    border: var(--border-box);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    
+}
+.photo{
+    position: relative;
+    width: 260px;
+    height: 260px;
+    margin: 20px;
+    border-radius: 130px;
+    overflow: hidden;
+
+}
+.img__creator{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.cretor__info{
+    position:  relative;
+    width: 860px;
+    margin: 20px;
+
+}
+.cretor__info__text{
+    color: var(--main-color);
+    font-size: 44px;
+    font-family: Raleway, sans-serif;
+}
+.creator__icongroup{
+    position: relative;
+    display:flex;
+    flex-wrap: wrap;
+    height: 78px;
+    margin: 4px;
+    padding: 4px;
+
+    
+
+}
+.creator__box__icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 84px;  
+    border-radius: 42px;
+    transition: background-color var(--animation-second);
+}
+
+.creator__icon{
+    position: relative;
+    width: 64px;
+    height: 64px;
+}
+
+.creator__box__icon:hover {
+    background-color: var(--background-mask);
+    
+    
+}
+/* == Footer =======================================*/
+
+
+
+
+
+
+
+
+
+/* == Для планшетов ================================*/
+@media (max-width:1280px) {
+    .container{
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}
+/* == Для мобильных устройств =======================*/
+@media (max-width:767px) {
+.container{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.background__vid__mob{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: -1000;
+
+}
+.vid{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+.warning{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    font-size: 12px;
+    color: red;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin: 48px auto 0 auto;
+}
+
+.background__vid{
+    display: none;
+
+}
+.intro__1{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 330px;
+
+
+    margin-top: 200px;
+    background-color: rgba(255, 255, 255, 0.921);
+    
+    padding: 6% 12% 12% 12% ;
+}
+.text__intro__1{
+    font-size: 25px;
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    line-height: 35px;
+}
+.text__intro__2{
+
+}
+.header{
+}
+.header__in{
+    display: none;
+}
+.header__in__mob{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 48px;
+    justify-content:space-between;
+    padding: 8px;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.948);
+    
+}
+.header__name{
+    font-weight: bold;
+    line-height: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+.logo{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-mask);
+    border-radius: 17px;
+    overflow: hidden;
+    width: 30%;
+    height: 34px;
+}
+.project__menu{
+    
+    color: var(--main-color);
+    
+    width: 30%;    
+}
+.logo__img__mob{
+    width: 60px;
+    height: 14px;
+
+}
+.project__menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-mask);
+    border-radius: 17px;
+    width: 30%;
+    height: 34px;
+}
+.btn__menu__mob{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-mask);
+    border-radius: 17px;
+    width: 30%;
+    height: 34px;
+}
+
+/* == Progect MOB =====================================*/
+
+.project__nav{
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    background-color: rgba(166, 166, 166, 0);
+}
+
+
+
+
+.small__project__box{    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+.box__image__mob{
+    top: 0;
+    left: 30;
+    right: 0;
+    width: 100%;
+    height: 340px;
+    
+
+}
+.img{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s linear;
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+.img__par__1{
+    position: fixed;
+    margin-top: 530px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -10;
+ 
+}
+.img__par__j1{
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.img__par__2{
+    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+    margin-top: 530px;
+    top: 194px; /*--фиксирующая позиция--*/
+    left: 0; /*--выравнивание по ширине--*/
+    width: 100%; /*--выравнивание по ширине--*/
+    height: 300px; /*--должна быть определена обязательно---*/
+    z-index: -20;
+ 
+}
+
+.img__par__j2{
+    position: absolute;
+    width: 100vw;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.box__info{
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+
+
+}
+.box__name{
+    position: relative;
+    width: 100%;
+    height: 600px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--main-color);
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.157);
+}
+.box__description{
+    margin: 0px;/*------*/
+    padding:  20px 20px 20px 40px;
+    background-color: white;
+}
+.margin__bottom{
+    width: 100%;
+    height: 100px;
+    background-color: rgba(166, 166, 166, 0.487);
+}
+.small__project__box:hover .box__image{
+    margin-top: 0px;
+}
+.small__project__box:hover .img{
+opacity: 1;
+}
+
+
+
+}
+.footer{
+
+}
+.footer__text{
+
+}
