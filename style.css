@@ -590,6 +590,7 @@ opacity: 0;
     background-color: rgba(166, 166, 166, 0);
     backdrop-filter: url(commonfilters.svg#filter);
     backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
 
 
 }
