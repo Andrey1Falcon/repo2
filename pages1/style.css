@@ -23,6 +23,8 @@
 body{ 
     font-family: Raleway, sans-serif;
     font-size: 14px;
+    width: 100vw;
+    height: 100vh;
     color: var(--main-color);
     margin: 0px;
     display: flex;
@@ -288,21 +290,6 @@ opacity: 0;
 }
 /* == Для мобильных устройств =======================*/
 @media (max-width:767px) {
-
-:root{
-    --vw-100: 100vw;
-    --vw-50: 50vw;
-    --mar-main: var(--stop-3);
-    --mar-0: calc((var(--vw-50) - var(--vw-50)) + var(--mar-main));
-    --mar-1: calc(1 * var(--vw-50) + var(--mar-main));
-    --mar-2: calc(2 * var(--vw-50) + var(--mar-main));
-    --mar-3: calc(3 * var(--vw-50) + var(--mar-main));
-    --stop-0: calc((var(--vw-50) - var(--vw-50)));
-    --stop-1: calc(1 * (var(--vw-50)));
-    --stop-2: calc(2 * (var(--vw-50)));
-    --stop-3: calc(3 * (var(--vw-50)));
-    
-}
 .container{
     position: relative;
     max-width: 100%;
@@ -343,10 +330,10 @@ opacity: 0;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: var(--stop-2);
+    height: 330px;
 
 
-    margin-top: var(--stop-1);
+    margin-top: 200px;
     background-color: rgba(255, 255, 255, 0.921);
     
     padding: 6% 12% 12% 12% ;
@@ -465,7 +452,7 @@ opacity: 0;
     width: 100%;
     height: 100%;
     transition: opacity 0.3s linear;
-} 
+ 
 
 
 
@@ -486,83 +473,66 @@ opacity: 0;
 
 
 
-.img__par__4{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-3); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
+
+
+
+
+
+
+
+}
+.img__par__1{
+    display: none;
+    position: fixed;
+    margin-top: 530px;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 70px;
     z-index: -10;
-}
-.img__par__j4{
-    position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-50);
-    object-fit: cover;
-}
-    
+    overflow: hidden;
 
 
-
-
-.img__par__3{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-2); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -20;
  
 }
-
-.img__par__j3{
+.img__par__j1{
     position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-50);
-    object-fit: cover;
+    width: 100%;
+    height: 80px;
+
+    overflow: hidden;
+
+
+
 }
+
+
+
+
+
+
+
+
+
 
 
 
 
 .img__par__2{
     position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-1); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -30;
+    margin-top: 530px;/*---- Отступ до позиции старта на месте скрытия---*/
+    /*--- разница между этими размерами должна составлять высота изображения--*/
+    top: 194px; /*--фиксирующая позиция--*/
+    left: 0; /*--выравнивание по ширине--*/
+    width: 100%; /*--выравнивание по ширине--*/
+    height: 300px; /*--должна быть определена обязательно---*/
+    z-index: -20;
  
 }
 
 .img__par__j2{
     position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-50);
-    object-fit: cover;
-}
-
-
-
-
-.img__par__1{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-0); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -40;
- 
-}
-
-.img__par__j1{
-    position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-50);
+    width: 100vw;
     object-fit: cover;
 }
 
@@ -591,7 +561,7 @@ opacity: 0;
 .box__info{
     position: relative;
     width: 100%;
-    height: 1900px;
+    height: auto;
     min-height: 100px;
     background-color: rgba(255, 255, 255, 0);
 
@@ -600,41 +570,29 @@ opacity: 0;
 .box__name{
     position: relative;
     width: 100%;
-    height: var(--stop-1);
+    height: 600px;
     
 
     display: flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 25px;
+    font-size: 20px;
     line-height: 30px;
     color: var(--main-color);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    background-color: rgb(165, 165, 165);
+    background-color: rgba(255, 255, 255, 0.157);
 }
 .box__description{
-    width: var(--vw-100);
-    color: rgb(255, 255, 255);
-    margin: var(--stop-3) 0 0 0;/*------*/
-    background-color: rgb(165, 165, 165);
-    padding: 20px 20px 20px 20px;
-    height: var(--stop-1);
-    
+    margin: 0px;/*------*/
+    padding:  20px 20px 20px 40px;
+    background-color: white;
 }
 .margin__bottom{
-    Display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    width: var(--vw-100);
-    color: rgb(255, 0, 0);
-    margin: var(--stop-3) 0 0 0;/*------*/
-    background-color: rgb(165, 165, 165);
-    padding: 20px 20px 20px 20px;
-    height: var(--stop-1);
-   
+    width: 100%;
+    height: 100px;
+    background-color: rgba(166, 166, 166, 0.487);
 }
 .small__project__box:hover .box__image{
     margin-top: 0px;
@@ -646,10 +604,6 @@ opacity: 1;
 
 
 }
-
-
-
-
 .footer{
 
 }
