@@ -33,7 +33,6 @@
 .margin__bottom{
     display: none;
 }
-
 body{ 
     font-family: Raleway, sans-serif;
     font-size: 14px;
@@ -289,22 +288,9 @@ opacity: 0;
  которые содержат в себе Paralax собранный мной на CSS.
  --*/
 @media (max-width:767px) {
-:root{
-    --vw-100: 100vw;
-    --mar-stop: calc(var(--vw-100) * 0.12);
-    --mar-top: calc(var(--vw-100) * 0.12);
-    --vw-50: 50vw;
-    --mar-main: calc(var(--stop-3) + var(--mar-top));
-    --mar-0: calc((var(--vw-50) - var(--vw-50)) + var(--mar-main));
-    --mar-1: calc(1 * var(--vw-50) + var(--mar-main));
-    --mar-2: calc(2 * var(--vw-50) + var(--mar-main));
-    --mar-3: calc(3 * var(--vw-50) + var(--mar-main));
-    --stop-0: calc(var(--vw-50) - var(--vw-50) + var(--mar-stop));
-    --stop-1: calc(1 * var(--vw-50) + var(--mar-stop));
-    --stop-2: calc(2 * var(--vw-50) + var(--mar-stop));
-    --stop-3: calc(3 * var(--vw-50) + var(--mar-stop));
 
-/* == Отключение desktop class =======================*/}
+
+/* == Отключение desktop class =======================*/
 .adapt__bckg__desktop{
     display: none;
 }
@@ -332,82 +318,304 @@ opacity: 0;
     display: flex;
 }
 /* == Bacground__mob =======================*/
-.bckg__pr__1{
+.bckg__pr__1__img__1{
     display: flex; 
 }
-.background__intro__mob{
+.bckg__intro__mob{
     position: fixed;
     top: 0px;
     left: 0;
     width: 100%;
     z-index: -1000;
 }
-.bckg__intro__img{
+.bckg__intro__img__mob{
     position: absolute;
     width: 100%;
     object-fit: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root{
+
+    --header-height: calc(0.12 * var(--vw-100));
+
+    --vw-100: 100vw;
+    --vw-25_5: calc(0.225 * var(--vw-100));
+    --vw-25: calc(0.25 * var(--vw-100));
+
+
+
+    --mar-stop: 0px ;/*--расстояние остановки всего изображения паралакса от верха экрана--*/
+
+
+    --mar-main: var(--stop-10);/*--расстояние от верха экрана до изображения паралакса --*/
+
+
+    --mar-1: var(--mar-main);
+    --mar-2: calc(1 * var(--vw-25_5) + var(--mar-main));
+    --mar-3: calc(2 * var(--vw-25_5) + var(--mar-main));
+    --mar-4: calc(3 * var(--vw-25_5) + var(--mar-main));
+    --mar-5: calc(4 * var(--vw-25_5) + var(--mar-main));
+    --mar-6: calc(5 * var(--vw-25_5) + var(--mar-main));
+    --mar-7: calc(6 * var(--vw-25_5) + var(--mar-main));
+    --mar-8: calc(7 * var(--vw-25_5) + var(--mar-main));
+    --mar-9: calc(8 * var(--vw-25_5) + var(--mar-main));
+    --mar-10: calc(9 * var(--vw-25_5) + var(--mar-main));
+   
+
+
+
+
+
+
+
+    --stop-1: var(--mar-stop);
+    --stop-2: calc(1 * var(--vw-25_5) + var(--mar-stop));
+    --stop-3: calc(2 * var(--vw-25_5) + var(--mar-stop));
+    --stop-4: calc(3 * var(--vw-25_5) + var(--mar-stop));
+    --stop-5: calc(4 * var(--vw-25_5) + var(--mar-stop));
+    --stop-6: calc(5 * var(--vw-25_5) + var(--mar-stop));
+    --stop-7: calc(6 * var(--vw-25_5) + var(--mar-stop));
+    --stop-8: calc(7 * var(--vw-25_5) + var(--mar-stop));
+    --stop-9: calc(8 * var(--vw-25_5) + var(--mar-stop));
+    --stop-10: calc(9 * var(--vw-25_5) + var(--mar-stop));
+}
+
+
+
+
 /* == Paralax pr 1__mob =======================*/
-.img__par__4{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-3); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -10;
-}
-.img__par__j4{
-    position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-50);
-    object-fit: cover;
-}
-.img__par__3{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-2); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -20;
-}
-.img__par__j3{
-    position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-100);
-    object-fit: cover;
-}
-.img__par__2{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
+
+
+
+
+.par__sgm__1{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
     top: var(--stop-1); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -30;
+    z-index: -999;
 }
-.img__par__j2{
-    position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-100);
-    object-fit: cover;
+.sgm__1{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
 }
-.img__par__1{
-    position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
-    margin-top: var(--mar-0);
-    top: var(--stop-0); /*--фиксирующая позиция--*/
-    left: 0px; /*--выравнивание по ширине--*/
-    width: 0px; /*--выравнивание по ширине--*/
-    height: 0px; /*--должна быть определена обязательно---*/
-    z-index: -40;
+
+
+
+
+.par__sgm__2{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-2); /*--фиксирующая позиция--*/
+    z-index: -998;
 }
-.img__par__j1{
-    position: absolute;
-    width: var(--vw-100);
-    height: var(--vw-100);
-    object-fit: cover;
+.sgm__2{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
 }
+
+
+
+
+.par__sgm__3{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-3); /*--фиксирующая позиция--*/
+    z-index: -997;
+}
+.sgm__3{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__4{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-4); /*--фиксирующая позиция--*/
+    z-index: -996;
+}
+.sgm__4{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__5{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-5); /*--фиксирующая позиция--*/
+    z-index: -995;
+}
+.sgm__5{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__6{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-6); /*--фиксирующая позиция--*/
+    z-index: -994;
+}
+.sgm__6{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__7{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-7); /*--фиксирующая позиция--*/
+    z-index: -993;
+}
+.sgm__7{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__8{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-8); /*--фиксирующая позиция--*/
+    z-index: -992;
+}
+.sgm__8{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__9{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-9); /*--фиксирующая позиция--*/
+    z-index: -991;
+}
+.sgm__9{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+.par__sgm__10{
+          position: sticky; /*--должна быть установлена в позиции sticky обязательно---*/
+          left: 0px; /*--выравнивание по ширине--*/
+          width: 0px; /*--выравнивание по ширине--*/
+          height: 0px; /*--должна быть определена обязательно---*/
+    margin-top: var(--mar-1);
+    top: var(--stop-10); /*--фиксирующая позиция--*/
+    z-index: -990;
+}
+.sgm__10{
+         position: absolute;
+         object-fit: cover;
+         width: var(--vw-100);
+         height: var(--vw-25);
+}
+
+
+
+
+
+
+
+
+
+
 /* == Header__mob =======================*/
 .header{
 }
@@ -419,7 +627,9 @@ opacity: 0;
     justify-content:space-between;
     padding: 8px;
     z-index: 5;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(100px);
 }
 .header__name{
     font-weight: bold;
@@ -472,9 +682,9 @@ opacity: 0;
     display: flex;
     flex-direction: column;
     width:var(--vw-100);
-    height: var(--stop-2);
-    margin-top: var(--stop-1);
-    background-color: rgba(255, 255, 255, 0.921);
+    height: var(--stop-6);
+    margin-top: var(--stop-5);
+    background-color: rgba(255, 255, 255, 0.801);
     padding: 6% 12% 12% 12% ;
 }
 .text__intro__1{
@@ -500,20 +710,6 @@ opacity: 0;
     margin: 0px;
     border-radius: 0px;
     background-color: rgba(255, 255, 255, 0);
-}
-.box__image__mob{
-    top: 0;
-    left: 30;
-    right: 0;
-    width: 100%;
-    height: 340px;
-}
-.img{
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s linear;
 } 
 .box__info{
     position: relative;
@@ -525,7 +721,7 @@ opacity: 0;
 .box__name{
     position: relative;
     width: 100%;
-    height: var(--stop-1);
+    height: var(--vw-25_5);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -549,9 +745,9 @@ opacity: 0;
     font-size: 16px;
     width: var(--vw-100);
     color: var(--background-mask);
-    margin: var(--stop-3) 0 0 0;/*------*/
+    margin: var(--stop-6) 0 0 0;/*------*/
     padding: 20px 20px 20px 20px;
-    height: var(--stop-1);
+    height: var(--stop-3);
     backdrop-filter: blur(60px);
     -webkit-backdrop-filter: blur(100px);
 }
@@ -575,6 +771,7 @@ opacity: 1;
 }
 /* == Удалить после зпаершения работы =======================*/
 .warning{
+    display: none;
     position: fixed;
     width: 100%;
     height: auto;
