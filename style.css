@@ -1,8 +1,8 @@
 /* == Default ===========================================*/
 :root {
     /*---RGB*---*/
-    --main-color: #1e1e1e;
-    --background-mask: rgb(226, 226, 226);
+    --main-color: #000000;
+    --background-mask: rgb(204, 204, 204);
     --background-box: rgb(255, 255, 255);
     --border-box: 0px solid rgb(255, 255, 255);
     --border-color: rgb(255, 255, 255);
@@ -561,7 +561,6 @@ opacity: 0;
 
 
 .box__info{
-    margin-top: var(--vw-50);
     position: relative;
     width: 100%;
     height: 1900px;
@@ -579,28 +578,45 @@ opacity: 0;
     
 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(100px);
+  
+
+
+}
+
+.box__name__text{
+    position: relative;
+
+    display: flex;
     justify-content: center;
     align-items: center;
 
     font-size: 25px;
     line-height: 30px;
-    color: var(--main-color);
+    
+    color: var(--background-mask);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
-    background-color: rgba(166, 166, 166, 0);
-    backdrop-filter: url(commonfilters.svg#filter);
-    backdrop-filter: blur(50px);
-    -webkit-backdrop-filter: blur(50px);
 
-
+   
 }
 .box__description{
+    font-family: Raleway, sans-serif;
+    font-size: 16px;
     width: var(--vw-100);
-    color: rgb(255, 255, 255);
+    color: var(--background-mask);
     margin: var(--stop-3) 0 0 0;/*------*/
-    background-color: rgb(165, 165, 165);
     padding: 20px 20px 20px 20px;
     height: var(--stop-1);
+
+    backdrop-filter: blur(60px);
+    -webkit-backdrop-filter: blur(100px);
     
 }
 .margin__bottom{
