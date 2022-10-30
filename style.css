@@ -301,9 +301,19 @@ opacity: 0;
     display: none;
 }
 /* == Тело страницы__mob =======================*/
+html{
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
 .body{ 
     position: relative;
     width: var(--vw-100);
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     font-family: Raleway, sans-serif;
     font-size: 14px;
     color: var(--main-color);
@@ -771,7 +781,6 @@ opacity: 1;
 }
 /* == Удалить после зпаершения работы =======================*/
 .warning{
-    display: none;
     position: fixed;
     width: 100%;
     height: auto;
