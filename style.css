@@ -639,7 +639,7 @@ html{
     z-index: 5;
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(3px);
 }
 .header__name{
     font-weight: bold;
@@ -759,7 +759,7 @@ html{
     padding: 20px 20px 20px 20px;
     height: var(--stop-3);
     backdrop-filter: blur(60px);
-    -webkit-backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(60px);
 }
 .margin__bottom{
     Display: flex;
