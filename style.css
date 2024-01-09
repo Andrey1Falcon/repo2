@@ -1,306 +1,6 @@
-/*=====================================
-===== Настольная версия ===============
-=======================================*/
-
-
-
-
-/*=====================================
-=====отключение мобильных классов =====*/
-.adapt__bckg__mob{
-    display: flex;
-    display: none;
-}
-.header__mob{
-    display: none;
-}
-.intro__mob{
-    display: none;
-}
-/*======================================
-===== Переменные =======================*/
-:root {
-    /*---RGB*---*/
-    --main-color: #000000;
-    --background-mask: rgb(204, 204, 204);
-    --background-box: rgb(255, 255, 255);
-    --border-box: 0px solid rgb(255, 255, 255);
-    /*---Picsel---*/
-    --border-radius: 10px;
-    --animation-second: 0.5s;
-    --small__project__box__size: 260px;
-    --small__project__box__size__img__heigth: 230px;
-    --margin__default: 20px;
-     /*---MOB*---*/
-}
-/*============================================
-===== Bckg__desktop ==========================*/
-.adapt__bckg__desktop{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: -2;
-}
-.bckg__intro__img__desktop{
-    position: absolute;
-    width: 100%;
-    object-fit: cover;
-}
-.container{
-    position: relative;
-    max-width : 1240px;
-    margin: 0 auto;
-}
-/*==============================================
-===== Тело страницы__mob =======================*/
-body{ 
-    font-family: Raleway, sans-serif;
-    font-size: 14px;
-    color: var(--main-color);
-    margin: 0px;
-    display: flex;
-    justify-content: center;
-}
-*{
-    box-sizing: border-box;
-}
-/*===========================================
-===== Header ================================*/
-.header{
-}
-.header__desktop{
-    position: relative;
-    left: 0px;
-    bottom: 0px;
-    height: 49px;
-    width: 100%;
-    background-color: var(--background-box);
-    border: var(--border-box);
-    padding: 5px 40px 5px 40px;
-    border-radius: var(--border-radius);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-}
-.logo{
-    position: relative;
-    display: flex;
-    align-items: center;
-}
-.logo__img{
-    width: 70px;
-    height: 30px;
-}
-.header__nav{
-    display: flex;
-    justify-content:space-between;
-    height: 39px;
-    width: 500px;
-}
-.header__nav__link{
-    display: flex;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    color: var(--main-color);
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0px 10px 0px 10px;
-    transition: background-color var(--animation-second);
-    border-radius: 10px;
-}
-.header__nav__link:hover {
-    background-color: var(--background-mask);   
-}
-/*===========================================
-===== Intro =================================*/
-.intro{
-    position: relative;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-}
-.intro__1{
-   display: none;
-}
-.intro__1{
-    display: none;
-}
-h1{
-    font-size: 20px;
-    color: var(--main-color);
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    line-height: 20px;
-}
-h2{
-    font-size: 20px;
-    color: var(--main-color);
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    margin-left: 100px;
-}
-/*======================================
-===== Progect ==========================*/
-.project__nav{
-    display:flex;
-    flex-wrap: wrap;
-    background-color: var(--background-box);
-    border: var(--border-box);
-    padding: 20px;
-    border-radius: var(--border-radius);
-}
-.small__project__box{
-    position: relative;
-    width: var(--small__project__box__size);
-    height: var(--small__project__box__size);
-    margin: var(--margin__default);
-    border-radius: var(--border-radius);
-    overflow: hidden;
-}
-.box__image__desktop{
-    position: relative;
-    width: var(--small__project__box__size);
-    height: var(--small__project__box__size__img__heigth);
-    transition: margin var(--animation-second) linear;
-}
-.img__pr_desktop{
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.3s linear;
-}
-.box__info{
-    width: 100%;
-    height: 290px;
-    background-color: var(--background-mask);
-}
-.box__name{
-    position: relative;
-    width: 260px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-color);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    text-transform: uppercase;
-}
-.box__description{
-    margin: 10px;
-}
-.small__project__box:hover .box__image__desktop{
-    margin-top: -230px;
-}
-.small__project__box:hover .img__pr_desktop{
-    opacity: 0;
-}
-/*======================================
-===== Creater ==========================*/
-.creator{
-    position:  relative;
-    display:flex;
-    flex-wrap: wrap;
-    background-color: var(--background-box);
-    border: var(--border-box);
-    padding: 20px;
-    border-radius: var(--border-radius);
-    overflow: hidden;
-}
-.creator__intro{
-    color: var(--main-color);
-    font-size: var(--font-size__h1);
-    font-family: 'Open Sans', sans-serif;
-    width: 100%;
-    padding-left: 20px;
-}
-.photo{
-    position: relative;
-    width: 130px;
-    height: 130px;
-    margin: 20px;
-    border-radius: 65px;
-    overflow: hidden;
-}
-.img__creator{
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.cretor__info{
-    position:  relative;
-    width: 860px;
-    margin: 20px;
-}
-.cretor__info__text{
-    color: var(--main-color);
-    font-size: 22px;
-    font-family: Raleway, sans-serif;
-}
-.creator__icongroup{
-    position: relative;
-    display:flex;
-    flex-wrap: wrap;
-    height: 39px;
-    margin: 2px;
-    padding: 2px;
-}
-.creator__box__icon{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 42px;
-    height: 42px;  
-    border-radius: 21px;
-    transition: background-color var(--animation-second);
-}
-.creator__icon{
-    position: relative;
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-}
-.creator__box__icon:hover {
-    background-color: var(--background-mask);
-}
-/*=========================================
-===== Footer ==============================*/
-
-/*=========================================
-===== Удалить после завершения работы =====*/
-.warning{
-    display: none;
-    font-size: 20px;
-    color: red;
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 20px;
-}
-/*=========================================
-====== Для планшетов ======================
-===========================================*/
-@media (max-width:1280px) {
-    .container{
-        position: relative;
-        max-width: 100%;
-        margin: 0 auto;
-    }
-}
-
-
-
 /*==========================================
 ===== Для мобильных устройств ==============
 ============================================*/
-
-
-
-
             /* ##### Заметки: 
             --Условия: 
             1: Обязательная установка
@@ -308,18 +8,6 @@ h2{
             которые содержат в себе Paralax 
             собранный мной на CSS.
             2: Не работает с "Overflow: hidden" ----*/
-@media (max-width:767px) {
-/*=========================================
-===== Отключение desktop class ============*/
-.adapt__bckg__desktop{
-    display: none;
-}
-.header__desktop{
-    display: none;
-}
-.box__image__desktop{
-    display: none;
-}
 /*======================================
 ===== Переменные =======================*/
 :root{
@@ -337,17 +25,12 @@ h2{
         --header-btn__margin__mob: calc(0.02 * var(--vw-100));/*
         /\margin шапки */
 
-
-
-
         /*\/ Шрифт =======================*/
         --font-size__default: calc(0.034 * var(--vw-100));
         --line-height__default: calc(0.051 * var(--vw-100));
         --font-size__h1: calc(0.04 * var(--vw-100));
         --line-height__h1: calc(0.06 * var(--vw-100));
         --font-size__header__btn: calc(0.043 * var(--vw-100));
-
-
 
         --mar-stop: 0px ;/*
         /\расстояние остановки всего изображения паралакса от верха экрана--*/
@@ -404,25 +87,21 @@ html{
     right: 0px;
     bottom: 0px;
 }
-.body{ 
-    width: var(--vw-100);
-    top:0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+body{ 
+    margin: 0px;
+    display: flex;
+    justify-content: center;
     font-family: Raleway, sans-serif;
     font-size: var(--font-size);
     line-height: var(--font-size);
     color: var(--main-color);
-    display: flex;
-    flex-direction: column;
-    
 }
+*{box-sizing: border-box;
+}/* это алгоритм подсчета размера блоков с учетом педдингов и границ */
 .container{
     width: var(--vw-100);
     display: flex;
     flex-direction: column;
-    
 }
 .mine{
     display: flex;
@@ -431,7 +110,6 @@ html{
 /*=========================================
 ===== Bckg__mob ===========================*/
 .adapt__bckg__mob{
-    display: inline;
     display: flex;
 }
 .bckg__intro__mob{
@@ -588,8 +266,6 @@ html{
 }
 /*=========================================
 ======= Header__mob =======================*/
-.header{
-}
 .header__mob{
     position: fixed;
     display: flex;
@@ -613,7 +289,6 @@ html{
     overflow: hidden;
     width: var(--header-btn-height__mob);
     height: var(--header-btn-height__mob);
-    
 }
 .btn__project__menu{
     position: relative;
@@ -760,7 +435,7 @@ background-color: #4aa2a249;
     margin: 0;
     margin-top: calc(-1 * var(--intro-name_menu_heightAndMargin__mob));
     padding: var(--vw-10);
-    padding-top: calc(var(--intro-name_menu_heightAndMargin__0__mob) + var(--vw-10)); 
+    padding-top: calc(var(--intro-name_menu_heightAndMargin__0__mob)); 
     position: relative;
     font-family: Raleway, sans-serif;
     font-size: var(--font-size__default);
@@ -790,6 +465,7 @@ opacity: 1;
     padding-top:0px ;
     border-radius: 0px;
     overflow: hidden;
+    background-color: #ffffff;
 }
 .creator__intro{
     position:  relative;
@@ -868,11 +544,4 @@ opacity: 1;
 }
 .creator__box__icon:hover {
     background-color: var(--background-mask);
-}
-/*==================================================
-===== Удалить после завершения работы ==============*/
-}
-.footer{
-}
-.footer__text{
 }
