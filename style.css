@@ -12,7 +12,7 @@
 ===== Переменные =======================*/
 :root{
          /*\/ Изменяемые переменные которые можно трогать =======================*/
-        --header-widgth: calc(var(--vw-100) - (var(--header-btn__margin__mob) * 2));
+        --header-widgth: calc(var(--vw-100));
 
         --header-btn-height__mob: calc(0.1 * var(--vw-100)); /*
          /\высота всей шапки без margin */
@@ -24,7 +24,7 @@
         --header-btn__brdr__rds__mob: calc(0.5 * var(--header-btn-height__mob));
         --header-btn__margin__mob: calc(0.02 * var(--vw-100));/*
         /\margin шапки */
-
+        --box-name-wigth: calc(--vw-100-(2*var(--header-btn-height__mob)));
         /*\/ Шрифт =======================*/
         --font-size__default: calc(0.034 * var(--vw-100));
         --line-height__default: calc(0.051 * var(--vw-100));
@@ -78,6 +78,9 @@
         --stop-8: calc(7 * var(--vw-25_5) + var(--mar-stop));
         --stop-9: calc(8 * var(--vw-25_5) + var(--mar-stop));
         --stop-10: calc(9 * var(--vw-25_5) + var(--mar-stop));
+        --color-black: rgba(0, 0, 0);
+        --color-white: rgba(255, 255, 255);
+
     }
 /*==============================================
 ===== Тело страницы__mob =======================*/
@@ -266,18 +269,32 @@ body{
 }
 /*=========================================
 ======= Header__mob =======================*/
+.header__mine{
+
+}
+.header_btn{
+    z-index: 5;
+}
 .header__mob{
     position: fixed;
     display: flex;
     justify-content:space-between;
     width: var(--header-widgth);
     height: var(--header-btn-height__mob); 
-    margin: var(--header-btn__margin__mob);
-    z-index: 2;
-    background-color: rgba(126, 126, 126, 0.604);
+    margin: 0px;
+    background-color: rgba(255, 255, 255);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
-    border-radius: var(--header-btn__brdr__rds__mob);
+    overflow: hidden;
+}
+.header__mob_btn{
+    position: fixed;
+    display: flex;
+    justify-content:space-between;
+    width: var(--header-widgth);
+    height: var(--header-btn-height__mob); 
+    margin: 0px;
+    background-color: rgba(255, 255, 255, 0);
     overflow: hidden;
 }
 .btn__info__creator{
@@ -312,6 +329,7 @@ body{
     font-size: var(--font-size__header__btn);
     line-height: var(--font-size__header__btn);
     font-weight: bold;
+    z-index: 5;
 }
 .btn__info__creator:active{
 background-color: #4aa2a249;
@@ -338,13 +356,14 @@ background-color: #4aa2a249;
     align-items: center;
     justify-content: center;
     width: var(--vw-100);
-    height: var(--intro-name_menu_heightAndMargin__mob);
+    height: var(--header-btn-height__mob);
     margin: 0px;
     z-index: 3;
     font-size: var(--font-size__h1);
     line-height: var(--tfont-size__h1);
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
+    background-color: var(--color-white);
 }
 .intro__text__box{
     margin-top: calc(var(--stop-4) - var(--intro-name_menu_heightAndMargin__mob));
@@ -415,8 +434,9 @@ background-color: #4aa2a249;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: var(--intro-name_menu_heightAndMargin__mob);
+    background-color: var(--color-white);
+    width: var(--vw-100-(2*var(--header-btn-height__mob)));
+    height: var(--header-btn-height__mob);
     z-index: 3;
 }
 .box__name__text{
